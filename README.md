@@ -1,5 +1,10 @@
 # [angular](https://angularjs.org/)-ui-switch
 
+## Update
+support to disable the switch component
+
+Just make  ng-disabled work!
+
 This is a simple iOS 7 style switch directive for AngularJS. You can use this module as you would use the default HTML checkbox input element. This is a super lightweight module and you can completely change the design using just CSS.
 
 Supported by all modern browsers: Chrome, Firefox, Opera, Safari, IE8+

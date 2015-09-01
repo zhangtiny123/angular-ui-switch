@@ -9,11 +9,14 @@ angular.module('uiSwitch', [])
       var html = '';
       html += '<span';
       html +=   ' class="switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
-      html +=   attrs.ngModel ? ' ng-click="' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()"' : '"') : '';
+      if(attrs.ngDisabled == false) {
+          html +=   attrs.ngModel ? ' ng-click="' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()"' : '"') : '';
+      }
       html +=   ' ng-class="{ checked:' + attrs.ngModel + ' }"';
       html +=   '>';
       html +=   '<small></small>';
       html +=   '<input type="checkbox"';
+      html +=     attrs.ngDisabled ? ' disabled="' + attrs.ngDisabled + '"' : '';
       html +=     attrs.id ? ' id="' + attrs.id + '"' : '';
       html +=     attrs.name ? ' name="' + attrs.name + '"' : '';
       html +=     attrs.ngModel ? ' ng-model="' + attrs.ngModel + '"' : '';
