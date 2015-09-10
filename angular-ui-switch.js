@@ -9,7 +9,7 @@ angular.module('uiSwitch', [])
       var html = '';
       html += '<span';
       html +=   ' class="switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
-      if(attrs.ngDisabled == false) {
+      if(!attrs.disabled) {
           html +=   attrs.ngModel ? ' ng-click="' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()"' : '"') : '';
       }
       html +=   ' ng-class="{ checked:' + attrs.ngModel + ' }"';
